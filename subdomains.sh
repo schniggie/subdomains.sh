@@ -301,9 +301,9 @@ then
 	then
 		if [ ${permutation_wordlist} != False ]
 		then
-			gotator -sub ${_output} -perm ${permutation_wordlist} -prefixes -depth 3 -numbers 10 -mindup -adv -silent | puredns resolve --resolvers ${resolvers} --quiet | anew ${_output}
+			gotator -sub ${_output} -perm ${permutation_wordlist} -prefixes -depth 1 -numbers 10 -mindup -adv -silent | puredns resolve --resolvers ${resolvers} --quiet | anew ${_output}
 		else
-			gotator -sub ${_output} -prefixes -depth 3 -numbers 10 -mindup -adv -silent | puredns resolve --resolvers ${resolvers} --quiet | anew ${_output}
+			gotator -sub ${_output} -prefixes -depth 1 -numbers 10 -mindup -adv -silent | puredns resolve --resolvers ${resolvers} --quiet | anew ${_output}
 		fi
 	fi
 fi
