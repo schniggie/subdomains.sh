@@ -169,8 +169,8 @@ script_path="${script_directory}/subdomains.sh"
 
 if [ -e "${script_path}" ]
 then
-	rm ${script_path}
+        rm ${script_path}
 fi
 
-eval ${DOWNLOAD_CMD} https://raw.githubusercontent.com/hueristiq/subdomains.sh/main/subdomains.sh > ${script_path}
+cp ${HOME}/subdomains.sh ${script_path}
 chmod u+x ${script_path}
