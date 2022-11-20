@@ -78,7 +78,7 @@ fi
 
 if [ ! -x "$(command -v go)" ] && [ ! -x "$(command -v /usr/local/go/bin/go)" ]
 then
-	version=1.17.6
+	version=1.19.3
 
 	echo -e "\n[+] go${version}\n"
 
