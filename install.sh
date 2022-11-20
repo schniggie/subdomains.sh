@@ -114,11 +114,13 @@ go install github.com/cgboal/sonarsearch/cmd/crobat@latest
 
 echo -e "\n[+] findomain\n"
 
-binary_path="/usr/local/bin/findomain"
+tmp_path="/tmp/findomain-linux.zip"
+binary_path="/usr/local/bin"
 
 eval ${CMD_PREFIX} bash <<EOF
-eval ${DOWNLOAD_CMD} https://github.com/Edu4rdSHL/findomain/releases/latest/download/findomain-linux > ${binary_path}
-chmod a+x ${binary_path}
+eval ${DOWNLOAD_CMD} https://github.com/findomain/findomain/releases/latest/download/findomain-linux.zip  > ${tmp_path}
+unzip ${tmp_path} -d ${binary_path}
+chmod a+x ${binary_path}/findomain
 EOF
 
 echo -e "\n[+] gotator\n"
