@@ -25,7 +25,7 @@ A wrapper around tools used for subdomain enumeration, to automate the workflow,
 Run the installation script:
 
 ```bash
-curl -s https://raw.githubusercontent.com/hueristiq/subdomains.sh/main/install.sh | bash -
+curl -s https://raw.githubusercontent.com/schniggie/subdomains.sh/main/install.sh | bash -
 ```
 Or run in an ephemeral Docker container:
 
@@ -38,7 +38,7 @@ cd subdomains.sh
 
 # After build, you can run the script with the same options listed above.
 # Each run will run in a new container, and the container is destroyed after run
-./docker-sudomains.sh -d example.com -r 1.1.1.1
+./docker-subdomains.sh -d example.com -r resolvers.txt -pW words.txt
 
 # To destroy the container image if desired
 ./docker-subdomains.sh destroy
